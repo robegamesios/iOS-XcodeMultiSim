@@ -27,15 +27,17 @@ c. Open Run destinations Cmd+Shift+2 then do the following:
 
 d. Go to Project Navigator, then select the Project, then select the Target.
    1. In Build Phases tab, add a new Run Script and paste the code below.
+
+```
+custom_sim=`xcrun simctl list | grep 'Custom Simulators' | awk -F'[()]' '{print $2}'`
+if [ ! -z "${custom_sim}" ] && [ "${TARGET_DEVICE_IDENTIFIER}" = "${custom_sim}" ]; then
+/bin/sh launch_multiple_simulators.sh
+fi
+```
+    
+   1. If you named your simulator something else, then update the name in the script (`grep 'iPhone15+MultiSim'`).
       
-        custom_sim=`xcrun simctl list | grep 'iPhone15+MultiSim' | awk -F'[()]' '{print $2}'`
-        if [ ! -z "${custom_sim}" ] && [ "${TARGET_DEVICE_IDENTIFIER}" = "${custom_sim}" ]; then
-        /bin/sh buildAndRunMultipleSimulators.sh
-        fi
-      
-   2. If you named your simulator something else, then update the name in the script (`grep 'iPhone15+MultiSim'`).
-      
-   3. You can also rename the run script
+   2. You can also rename the run script
 
 ![Screenshot 2024-08-31 at 1 45 54 PM](https://github.com/user-attachments/assets/2d679211-2c87-4a91-9a1d-b555c8625f6f)
 
