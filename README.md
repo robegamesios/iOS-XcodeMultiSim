@@ -5,6 +5,7 @@ Tested on Xcode 15.4
 
 # STEPS
 a. Copy the script file `buildAndRunMultipleSimulators.sh` and paste in on your project root directory.
+
 b. Open the script file and change the following:
   1. project name - Go to Xcode -> Settings -> Locations -> Derived Data. Your project name is before the random characters. For example in `SwiftUI-WeatherApp-fyrnhrghniuvzdcfowvoxagsnypn`, your project name is `SwiftUI-WeatherApp`.
 
