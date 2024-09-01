@@ -20,11 +20,21 @@ sdk="iphonesimulator"
 configuration="Debug"
 project_path="$(dirname "$0")/${app_name}.xcodeproj"  # Relative path to the Xcode project
 
-# Define simulators (open Run Destinations in Xcode Cmd+Shift+2 and check the device identifier)
+# Define simulators 
+# open Run Destinations in Xcode Cmd+Shift+2 to check the device name and identifier
+# or in terminal: xcrun simctl list devices 
+
 simulators=(
-    "F4CF5FA5-3DEB-40A0-BEC7-EF8B119BAF2A"  # iPad Pro M4 13 inch
-    "196CC12E-FC60-40D6-A225-2D569C4DA4E5"  # iPad Mini 6th gen
-    "DEBDE3E9-A4B8-412C-A400-2D4C3F560F6D"  # iPhone SE (3rd gen)
+    # Using device name
+    "iPad Pro 13-inch (M4)"
+    "iPad mini (6th generation)"
+    "iPhone SE (3rd generation)"
+    # "iPhone 15" (comment if running on Xcode, otherwise uncomment to use on CLI)
+
+    # Using device identifier
+    # "F4CF5FA5-3DEB-40A0-BEC7-EF8B119BAF2A"  # iPad Pro M4 13 inch
+    # "196CC12E-FC60-40D6-A225-2D569C4DA4E5"  # iPad Mini 6th gen
+    # "DEBDE3E9-A4B8-412C-A400-2D4C3F560F6D"  # iPhone SE (3rd gen)
     # "B9B91B7C-D1C1-490F-BF70-2B089A5A82EC"  # iPhone 15 (comment if running on Xcode, otherwise uncomment to use on CLI)
 
 )
