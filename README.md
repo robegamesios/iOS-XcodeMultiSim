@@ -30,9 +30,9 @@ d. Go to Project Navigator, then select the Project, then select the Target.
    1. In Build Phases tab, add a new Run Script and paste the code below.
 
 ```
-custom_sim=`xcrun simctl list | grep 'Custom Simulators' | awk -F'[()]' '{print $2}'`
+custom_sim=`xcrun simctl list | grep 'iPhone15+MultiSim' | awk -F'[()]' '{print $2}'`
 if [ ! -z "${custom_sim}" ] && [ "${TARGET_DEVICE_IDENTIFIER}" = "${custom_sim}" ]; then
-/bin/sh launch_multiple_simulators.sh
+/bin/sh buildAndRunMultipleSimulators.sh
 fi
 ```
     
