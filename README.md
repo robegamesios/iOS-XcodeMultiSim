@@ -2,6 +2,7 @@
 Build once and run multiple Simulators in Xcode or CLI.
 Tested on Xcode 15.4
 
+Youtube video: https://youtu.be/rEm9NqzoHE0?si=eKRU5rLv8cHNA3i4
 
 # STEPS
 a. Copy the script file `buildAndRunMultipleSimulators.sh` and paste in on your project root directory.
